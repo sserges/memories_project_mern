@@ -1,6 +1,14 @@
 import express from 'express'
-import mongoose from 'mongoose'
+import colors from 'colors'
 import cors from 'cors'
+
+import dotenv from 'dotenv'
+
+const conf = dotenv.config()
+
+import connectDB from './config/db.js'
+
+connectDB()
 
 const app = express()
 
